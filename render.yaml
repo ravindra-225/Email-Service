@@ -1,0 +1,9 @@
+services:
+- type: web
+  name: emailservice-raveendra
+  env: java
+  buildCommand: mvn clean package
+  startCommand: java -jar target/EmailService-0.0.1-SNAPSHOT.jar
+  envVars:
+    - key: SERVER_PORT
+      value: 8080
