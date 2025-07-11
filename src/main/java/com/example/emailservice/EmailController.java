@@ -1,6 +1,7 @@
 package com.example.emailservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.slf4j.Logger;
@@ -19,5 +20,10 @@ public class EmailController {
         logger.info("Received request: email={}, to={}", email, to);
         boolean success = emailService.sendEmail(email, to);
         return success ? "Email sent successfully" : "Failed to send email";
+    }
+    
+    @GetMapping("/")
+    public ResponseEntity<String> welcome() {
+        return ResponseEntity.ok("Welcome to Email Service API");
     }
 }
