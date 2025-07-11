@@ -2,7 +2,7 @@ services:
 - type: web
   name: emailservice-raveendra
   runtime: docker
-  dockerfilePath: ./EmailService/Dockerfile
+  dockerfilePath: ./Dockerfile
   envVars:
     - key: SERVER_PORT
       value: 8080
