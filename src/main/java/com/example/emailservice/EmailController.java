@@ -22,7 +22,7 @@ public class EmailController {
         return success ? "Email sent successfully" : "Failed to send email";
     }
     
-    @GetMapping("/api/email/send")
+    @GetMapping("/")
     public ResponseEntity<String> welcome() {
         return ResponseEntity.ok("Welcome to Email Service API");
     }
