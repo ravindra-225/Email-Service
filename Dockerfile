@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . /app
 RUN chmod +x /app/mvnw
 RUN /app/mvnw clean package -DskipTests
-ENTRYPOINT ["java", "-jar", "/app/target/EmailService-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/emailservice-0.0.1-SNAPSHOT.jar"]
